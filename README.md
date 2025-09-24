@@ -1,19 +1,35 @@
-📊 **Projeto Pipeline de Dados do Telegram** 📊
-🔍 Este projeto consiste em construir um *pipeline* de dados que irá ingerir, processar, armazenar e expor mensagens de um grupo do **Telegram** para que posteriormente seja possível realizar algumas análises tendo como base o histórico dessas mensagens.
+# 📊 Projeto Pipeline de Dados do Telegram 📊
 
-O projeto está dividido em 2 partes:
-- Parte 1: As mensagens do Telegram são captadas pelo próprio Bot API do Telegram usando os métodos GetMe e GetUpdates.
-- Parte 2: As mensagens do Telegram são captadas via streaming com Webhook e são usados serviços da AWS para que isso ocorra diariamente em determinado momento.
-  
-🧰 Tecnologias Utilizadas:
-Telegram: Criação do grupo e do bot.
-Amazon S3: Armazenamento dos dados em nuvem.
-AWS Athena: Execução de queries diretamente sobre os dados no S3.
-AWS Lambda: Criação das funções necessárias.
-AWS API Gateway: Definição da API para redirecionamento do dado recebido para outros serviços da AWS.
-AWS Event Bridge: Ativa a função ETL diarimentes.
-SQL: Para consultas e manipulação dos dados.
-Google Colab: Ambiente interativo utilizado para a criação do notebook e execução de alguns códigos.
+## 🔍 Visão Geral
+Este projeto tem como objetivo construir um pipeline de dados capaz de ingerir, processar, armazenar e expor mensagens de um grupo do Telegram. A partir desse histórico, é possível realizar análises e gerar insights relevantes.
 
-✍️ Autor: Projeto desenvolvido com dedicação por Taíta B. Ramos.
-📊 Projeto desenvolvido para conclusão do módulo Projeto Pipeline de dados do Telegram do curso de Analista de Dados da EBAC.
+
+## 🧱 Estrutura do Projeto
+O pipeline está dividido em duas partes principais:
+
+📥 Parte 1 — Captura via Bot API
+- Utiliza os métodos GetMe e GetUpdates da Telegram Bot API para coletar mensagens diretamente do grupo.
+
+
+🌐 Parte 2 — Captura via Webhook + AWS
+- As mensagens são captadas por streaming via Webhook.
+- Serviços da AWS são utilizados para automatizar essa coleta e armazenamento diário em horários definidos.
+
+
+
+## 🧰 Tecnologias Utilizadas
+- Telegram: Criação do grupo e do bot para captura das mensagens.
+- Amazon S3: Armazenamento dos dados em nuvem.
+- AWS Athena: Execução de queries diretamente sobre os dados armazenados no S3.
+- AWS Lambda: Criação das funções de processamento e transformação.
+- AWS API Gateway: Redirecionamento dos dados recebidos para outros serviços da AWS.
+- AWS EventBridge: Agendamento da execução diária da função ETL.
+- SQL: Consultas e manipulação dos dados.
+- Google Colab: Ambiente interativo para desenvolvimento e execução de notebooks.
+
+
+
+✍️ Autor: Desenvolvido com dedicação por Taíta B. Ramos.
+
+📚 Este projeto é parte da conclusão do módulo "Pipeline de Dados do Telegram" do curso de Analista de Dados da EBAC.
+
